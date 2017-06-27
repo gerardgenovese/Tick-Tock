@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tick Tock</title>
+
+    
+</head>    
+<body>
+
+    <p id="ticktock"></p>   
+
+    <script>
+
+        var tick = true;
+        var tickTock = function ticker() {
+            if(tick) { 
+                document.write("tick ");          
+                console.log("tick");
+                tick = false;
+                
+            } else {
+                document.write("tock ");
+                console.log("tock");
+                tick = true;
+            }
+        }
+        
+        setInterval(tickTock, 1000);
+
+
+        var eltickTock = document.getElementById("ticktock");
+        eltickTock.textContent = tickTock();
+   
+    </script>
+</body>
+    
+</html>
